@@ -129,7 +129,7 @@ if user_query := st.chat_input():
         with st.spinner("Analyzing..."):
             response = requests.post(
                 "https://api.gemini.com/v1/complete",
-                headers={"Authorization": f"Bearer {'AIzaSyCqkVZnvPfJwyTwDGLxn3MMN0nYCKRvbos'}"},
+                headers={"Authorization": f"Bearer {'your_gemini_api_key'}"},
                 json={"prompt": user_query, "max_tokens": 150}
             )
             ai_response = response.json().get("output_text", "Sorry, unable to process your request.")
